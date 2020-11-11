@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@100&display=swap');
+
+section {
+    font-family: 'Raleway', sans-serif;
+}
+
+.heading {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.absolute-wrapper {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  position: absolute;
+  overflow: hidden;
+  height: 100vh;
+  width: 60%;
+  z-index: -1;
+}
+
+.colored-backgrounds {
+  position: absolute;
+  height: inherit;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.colored-backgrounds div {
+  width: 100%;
+  height: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.colored-backgrounds div:nth-child(1) {
+  background-color: #FFD94E;
+}
+
+.colored-backgrounds div:nth-child(2) {
+  background-color: #adc1a8;
+}
+
+.colored-backgrounds div:nth-child(3) {
+  background-color: #d3d8d6;
+}
+
+.colored-backgrounds div:nth-child(4) {
+  background-color: #d3ae99;
+}
+
+.content {
+    width: 60vw;
+    padding: 2vw;
+    background-color: #FFD94E;
+}
+.content h1 {
+  font-size: 3.5vw;
+  width: 30vw;
+  margin-bottom: 10vh;
+}
+
+.content p {
+  width: 30vw;
+  margin-bottom: 1.5rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.content .button {
+  width: 60vw;
+  background-color: #FFD94E;
+  
+}
+.btn:hover{
+  transform: scale(1.1);
+}
+.content .button .btn {
+  border: none;
+  background-color: #FFD94E;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  background-color: #E5E5E5;
+  border: 0.5px solid black;
+  margin-top: 5vh;
+  margin-left: 23%;
+  color: black;
+  justify-self: center;
+}
+
+.content button:active {
+  -webkit-transform: scale(0.96);
+  transform: scale(0.96);
+}
+
+.images {
+  left: -5vw;
+  top: 5vh;
+}
+
+.images .image {
+  height: 100%;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.image:nth-child(1) {
+  background: url("/static/images/s2020.png") 
+  no-repeat 50% 50% / cover;
+}
+
+.image:nth-child(2) {
+  background: url("https://vikram-hegde.github.io/ui-animation/images/image2.png")
+    no-repeat 50% 50% / cover;
+}
+
+.image:nth-child(3) {
+  background: url("https://vikram-hegde.github.io/ui-animation/images/image3.png")
+    no-repeat 50% 50% / cover;
+}
+
+.image:nth-child(4) {
+  background: url("https://vikram-hegde.github.io/ui-animation/images/image4.png")
+    no-repeat 50% 50% / cover;
+}
+
+.navigation{
+  position: relative;
+  margin-top: 30vh;
+  margin-left: 3vw;
+  width: 10vw;
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row: 1;
+}
+
+.navigation .right,
+.navigation .left {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10vh;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navigation .right:hover,
+.navigation .left:hover {
+  background-color: #333;
+  color: white;
+}
+
+.navigation .right:active,
+.navigation .left:active {
+  -webkit-transform: scale(0.96);
+  transform: scale(0.96);
+}
+
+.images,
+.colored-backgrounds {
+  -webkit-transition: -webkit-transform 0.35s
+    cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: -webkit-transform 0.35s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: transform 0.35s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: transform 0.35s cubic-bezier(0.39, 0.575, 0.565, 1),
+    -webkit-transform 0.35s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.colored-backgrounds {
+  -webkit-transition-delay: 150ms;
+  transition-delay: 150ms;
+}
+.content div.active{
+  opacity: 1;
+}
+.content div{
+  position: absolute;
+  object-fit:cover;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.imageBox{
+  grid-column-start: 2; 
+  grid-column-end: 2;
+  width: 20vw;
+}
+
+.imageBox div{
+  display:none;
+  right:0;
+}
+
+.imageBox div.active{
+  display: block;
+  position: relative;
+  left: -15vw;
+  top: 5vh;
+}
+
+#magazines{
+  width: 30vw;
+  left: 10vw;
+  margin-top: 5vw;
+  justify-content: center;
+}

@@ -1,0 +1,40 @@
+.grid-container{
+    border: 3px solid #FFD94E;
+    background-color: #FFD94E;
+    width: 40vw;
+    height: 70vh;
+    margin-left: 30vw;
+    margin-top: 10vh;
+}
+
+.signInUpToggle{
+    height: 10vh;
+    margin-top: 10vh;
+    margin-left: 5vw;
+}
+
+.signInButton{
+    background-color: black;
+    color: white;
+    border-color: black;
+    width: 28vw;
+    height: 4vh;
+    border-radius: 12px;
+}
+
+.finishSignUpButton{
+    background-color: black;
+    color: white;
+    border-color: black;
+    width: 28vw;
+    height: 4vh;
+    border-radius: 12px;
+}
+
+.closeWindow{
+    background-color:#FFD94E; 
+    border-style: solid; 
+    border-color: #FFD94E; 
+    mix-blend-mode:normal; 
+    margin-left: 86%;
+}

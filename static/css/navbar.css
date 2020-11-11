@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@500&display=swap');
+/*
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    
+  }
+  
+nav li {
+  margin-left: 15px;
+    float: left;
+  }
+  
+nav li a {
+    margin-top: 9px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  */
+
+  .form_container {
+    margin-top: 20px;
+  }
+
+  #form-title{
+    color: #fff;
+    
+  }
+
+  .login_btn {
+    width: 100%;
+    background: #33ccff !important;
+    color: white !important;
+  }
+  .login_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+  }
+  .login_container {
+    padding: 0 2rem;
+  }
+  .input-group-text {
+    background: #f7ba5b !important;
+    color: white !important;
+    border: 0 !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+  }
+  .input_user,
+  .input_pass:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+  }
+
+  #messages{
+    background-color: grey;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+nav ul #sign_in{
+   margin-left: 5vw;
+}
+  /* Change the link color to #111 (black) on hover */
+
+.grid-containerNav{
+    display: grid;
+    grid-template-rows: 1;
+    
+    background-color: #FFFFFF;
+    font-family: 'Playfair Display', serif;
+    width: 100vw;
+}
+
+.imgPic{
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row:1;
+
+  width: 20vw;
+
+  margin-top: 9px;
+  display: grid;
+  color: black;
+  padding: 1vw;
+  text-decoration: none;
+  float: left;
+}
+
+.marginGrid{
+  grid-row: 2;
+  height: 8vh;
+}
+
+.nav-link1{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row:1;
+
+  margin-top: 9px;
+  display: grid;
+  color: black;
+  padding: 1vw;
+  text-decoration: none;
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+  float: left;
+}
+
+.nav-link1:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
+}
+
+.nav-link2{
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row:1;
+
+  margin-top: 9px;
+  display: grid;
+  color: black;
+  padding: 1vw;
+  text-decoration: none;
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+  float: left;
+}
+
+.nav-link2:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
+}
+
+.nav-link3{
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row:1;
+
+  margin-top: 9px;
+  display: grid;
+  color: black;
+  padding: 1vw;
+  text-decoration: none;
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+  float: left;
+}
+
+.nav-link3:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
+}
+
+.nav-link4{
+  grid-column-start: 5;
+  grid-column-end: 5;
+  grid-row:1;
+
+  margin-top: 9px;
+  display: grid;
+  color: black;
+  padding: 1vw;
+  text-decoration: none;
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+  float: left;
+}
+
+.nav-link4:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
+}
+
+.nav-link5{
+  grid-column-start: 6;
+  grid-column-end: 6;
+  grid-row:1;
+
+  margin-top: 9px;
+  display: grid;
+  color: black;
+  padding: 1vw;
+  text-decoration: none;
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+  float: left;
+}
+
+.nav-link5:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
+}
+
+.nav-link6{
+  grid-column-start: 7;
+  grid-column-end: 7;
+  grid-row:1;
+
+  margin-top: 9px;
+  display: grid;
+  color: black;
+  padding: 1vw;
+  text-decoration: none;
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+  float: left;
+}
+
+.nav-link6:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
+}
+
+.nav-link7{
+  grid-column-start: 11;
+  grid-column-end: 11;
+  grid-row:1;
+
+  margin-top: 9px;
+  display: grid;
+  color: black;
+  text-align: right;
+  padding: 1vw;
+  text-decoration: none;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  float: left;
+}
+
+.nav-link7:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
+}
+
+.nav-link8{
+  grid-column-start: 12;
+  grid-column-end: 12;
+  grid-row:1;
+
+  margin-top: 9px;
+  display: grid;
+  color: black;
+  text-align: right;
+  padding: 1vw;
+  text-decoration: none;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  float: left;
+}
+
+.nav-link8:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
+}
+
+.nav-link9{
+  grid-column-start: 12;
+  grid-column-end: 11;
+  grid-row:1;
+
+  margin-top: 9px;
+  display: grid;
+  color: black;
+  text-align: right;
+  padding: 1vw;
+  text-decoration: none;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  float: left;
+}
+
+.nav-link9:hover{
+  color: grey;
+  text-decoration: none;
+  font-size: 90px;
+}
+
+.hello-msg{
+  position: relative;
+  background-color : #FFFFFF;
+  margin-top: 4.5vh;
+  grid-row: 1;
+}
+
+.hello-txt{
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 2vw;
+  margin-left: 9vw;
+}
+
+.log-txt{
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5vw;
+  text-align: right;
+}
+
+#nav-txt{
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3vw;
+  margin-top: 4.5vh;
+
+  font-weight: bold;
+}
+h3{
+  font-family: 'Raleway', sans-serif;
+  text-align: left;
+}
+.container{
+  border: 3px solid black;
+  
+  border-color: black;
+  padding: 20px;
+}

@@ -1,0 +1,21 @@
+body{
+    background-color: #FFFFFF;
+}
+
+.grid-containerMain{
+    display: grid;
+    grid-template-rows: 2;
+    height: fit-content
+}
+
+.gridNav{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row: 1;
+}
+
+.gridBody{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row: 2;
+}

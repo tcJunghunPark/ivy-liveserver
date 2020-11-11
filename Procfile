@@ -1,0 +1,1 @@
+web: gunicorn ivyMagazine.wsgi --log-file -

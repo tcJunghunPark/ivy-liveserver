@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@100&display=swap');
+
+.grid-container{
+  height: 100vh;
+}
+
+.infoTable{
+  grid-template-rows: 2;
+  display: grid;
+}
+
+.myInfo{
+  grid-row: 1;
+  grid-column-start:1;
+  grid-column-end: 1;
+  font-family: "Playfair Display", serif;
+  text-align: center; 
+  margin-top: 2rem; 
+  font-size: 5rem;
+}
+
+.fields{
+  grid-row: 2;
+  grid-column-start:2;
+  grid-column-end: 2;
+  font-size: 2vw;
+  margin-right: 2vw;
+}
+
+.values{
+  position: relative;
+  left: -5vw;
+  grid-row: 2;
+  grid-column-start:3;
+  grid-column-end: 3;
+  font-size: 2vw;
+}
+
+
+tr{
+  font-size: 2rem;
+  margin-right: 2vw;
+  border-spacing:50em;
+  border-collapse:separate; 
+}
+th{
+  border-spacing:50em;
+  border-collapse:separate; 
+}
+
+table{
+  border-collapse: separate;
+  border-spacing: 2em;
+  width: 70vw;
+  margin-left: 20vw;
+}
+
+.center{
+  margin-right: 0vw;
+}
+
+.nameField{
+  font-family: "Playfair Display", serif;
+}
+
+.emailField{
+  font-family: "Playfair Display", serif;
+}
+
+.nameValue{
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+}
+
+.emailValue{
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+}

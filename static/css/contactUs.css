@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@500&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+/*body nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    justify-content: center;
+    text-align: center;
+    
+  }
+  
+  body nav li {
+    float: left;
+    margin-left: 15px;
+  }
+  
+  body nav li a {
+    margin-top: 4px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }*/
+  
+
+body nav ul #sign_in{
+    margin-left: 17vw;
+ }
+  /* Change the link color to #111 (black) on hover */
+  body nav li a:hover {
+   
+  }
+
+/*section{
+    position: relative;
+   
+    justify-content: center;
+    align-self: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background: #ffffff;
+}
+
+section::before
+{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: #FFD94E;
+}*/
+
+/*section */.grid-container
+{
+    position: relative;
+    display: grid;
+    grid-template-rows: 1;
+    background-color: #FFFFFF;
+    height: fit-content;
+}
+
+/*section */.grid-container .contactForm
+{
+    width: 60vw;
+    height: /*calc(100% - 300px)*/fit-content;
+    z-index: 1;
+    page-break-after: 40px;
+    padding: 5vw;
+    padding-top: 11vh;
+    justify-content: space-between;
+    background-color: #FFD94E;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+/*section */.grid-container .contactForm h2
+{
+    color: #000000;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-weight: 1000;
+    justify-content: center;
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 50px;
+}
+
+/*section */.grid-container .contactForm .formBox
+{
+    position: relative;
+    text-align: center; 
+  
+    margin-top: -20px;
+}
+
+/*section */.grid-container .contactForm .formBox .inputBox
+{
+    position: relative;
+    margin: 0 0 1px 0;
+}
+
+/*section */.grid-container .contactForm .formBox .inputBox .formInfo
+{
+    position: relative;
+    margin: 30px;
+    font-size: 0.9rem;
+    text-align: left;
+    margin-left: 7vw;
+    font-family: Playfair Display, serif;
+    font-weight: 10000;
+    opacity: 70%;
+}
+
+/*section */.grid-container .contactForm .formBox .inputBox input[type="text"],
+/*section */.grid-container .contactForm .formBox .inputBox textarea
+{
+    position: relative;
+  
+    width: 70% !important;
+ 
+    font-size: 15px;
+    font-weight: 300;
+    color: #333;
+    border:none;
+    border-bottom: 1px solid #777;
+    outline: none;
+    background: #FFD94E;
+}
+
+/*section */.grid-container .contactForm .formBox .inputBox input[type="text"]
+{
+    margin-top: -100px;
+}
+
+/*section */.grid-container .contactForm .formBox .inputBox textarea
+{
+    border: 1px solid #777;
+    height: 12vh;
+    top: -20px;
+    resize: none;
+ 
+}
+
+/*section */.grid-container .contactForm .formBox .inputBox input[type="submit"]
+{
+    position: relative;
+    cursor: pointer;
+    background: #FFD94E;
+    color: #333;
+    border: 1px solid #333;
+    
+    width: 255px;
+    height: 63px;
+    padding: 12px;
+    font-size: 25px;
+
+}
+
+/*section */.grid-container .contactForm .formBox .inputBox input[type="submit"]:hover{
+    background: #333;
+    color: #FFD94E;
+}
+
+
+/*section*/ .grid-container .purchaseForm 
+{
+    position: relative;
+    width: 40vw;
+    height: fit-content;
+    float:right;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    background-color: #FFFFFF;
+    padding-top: 8vh;
+    padding-left: 2vw;
+}
+
+/*section */.grid-container .purchaseForm h2
+{
+    color: #000000;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-weight: 1000;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+/*section */.grid-container .purchaseForm .formBox
+{
+    position: relative;
+    text-align: center; 
+  
+    margin-top: -20px;
+}
+
+/*section */.grid-container .purchaseForm .formBox .inputBox
+{
+    position: relative;
+    margin: 0 0 1px 0;
+}
+
+/*section */.grid-container .purchaseForm .formBox .inputBox input[type="text"]
+{
+    margin-top: -100px;
+}
+
+/*section */.grid-container .purchaseForm .formBox .inputBox .formInfo
+{
+    position: relative;
+    margin: 30px;
+    font-size: 0.9rem;
+    text-align: left;
+    margin-left: 7vw;
+    font-family: Playfair Display, serif;
+    font-weight: 10000;
+    opacity: 70%;
+}
+
+/*section */.grid-container .purchaseForm .formBox .inputBox .checkTable{
+    position: relative;
+    margin: 30px;
+    font-size: 0.9rem;
+    text-align: left;
+    margin-left: 5vw;
+    font-family: 'Raleway', serif;
+    font-weight: 10000;
+    opacity: 70%; 
+    left: 5vw;
+}
+
+/*section */.grid-container .purchaseForm .formBox .inputBox .mOption{
+    position: relative;
+    margin: 0;
+    font-size: 15px;
+    text-align: left;
+    margin-right: 10vw;
+    font-family: 'Raleway', serif;
+    font-weight: 10000;
+    opacity: 70%;
+    width: 20vw;
+}
+
+/*section */.grid-container .purchaseForm .formBox .inputBox input[type="text"],
+/*section */.grid-container .purchaseForm .formBox .inputBox textarea
+{
+    position: relative;
+  
+    width: 65% !important;
+ 
+    font-size: 15px;
+    font-weight: 300;
+    color: #333;
+    border:none;
+    border-bottom: 1px solid #777;
+    outline: none;
+    background: #ffffff;
+}
+
+/*section */.grid-container .purchaseForm .formBox .inputBox input[type="submit"]
+{
+    position: relative;
+    cursor: pointer;
+    background: #ffffff;
+    color: #333;
+    border: 1px solid #333;
+    top: 14vh;
+    width: fit-content;
+    height: 63px;
+    padding: 12px;
+    font-size: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+
+}
+
+/*section */.grid-container .purchaseForm .formBox .inputBox input[type="submit"]:hover{
+    background: #333;
+    color: #E5E5E5;
+}
