@@ -1,0 +1,69 @@
+{% extends 'magazines/main.html'%}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/detail.css' %}">
+
+
+<div style="text-align: center; font-size:xx-large; background-color: #FFD94E;padding-top: 2vh;padding-bottom: 2vh;">
+{{post.title}}
+<button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#basicExampleModal" style= "border-radius: 75px; margin-left: 1.5vw;">
+  i
+</button>
+
+</div>
+<br>
+
+<div class="container-fluid">
+  
+    <div class="row">
+        
+        <div class="column">
+        {% for p in photos %}
+        {% if forloop.counter0|divisibleby:2 %}
+            <img  src="{{p.images.url}}">
+        {% endif %}
+        {% endfor %}
+        </div>
+        <div class="column">
+          {% for p in photos %}
+            {% if not forloop.counter0|divisibleby:2 %}
+            <img src="{{p.images.url}}">
+
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        
+      
+    </div>
+  </div>
+
+  <!-- The Info Modal -->
+  <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-left: 32vw;margin-top: 20vh;height: 70vh; width: 40vw;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">INFO</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container" >
+            <h2 style="text-align: center;">{{post.title}}</h2>
+            <br>
+            <h5 class = "caption">{{post.description}}</h4>
+            <br>
+            <h6 class = "staff">{{post.involvedEditor}}</h4>
+            <br>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

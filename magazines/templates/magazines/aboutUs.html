@@ -1,0 +1,137 @@
+{% extends 'magazines/main.html'%}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/aboutUs.css' %}">
+
+<div class = 'grid-container'>
+    <div class = 'col-7'>
+        <div id='story-cont'>
+            <div id = 't1' class = 'row' style="width: 30vw;">
+                <p class = 'title'> OUR STORY</p>
+            </div>
+            <div id = "st1"  class = 'row' style="width: 30vw;">
+                <p class = 'subTitle'> Who we are</p>
+            </div>
+            <div id = 'ct1'  class = 'row' style="width: 30vw;">
+                <p class = 'contents'>
+                IVY Magazine Club was founded in Fall 2018 by two FIT 
+                students at SUNY Korea. The club brings together a diverse group 
+                of members across IGC to create dynamic editorials, interview students and 
+                professionals in the fashion industry, and capture campus life events. 
+                </p>
+                <p class = 'contents'>
+                Our goal is to put out high-quality, interesting, and fun content while giving 
+                our members an opportunity to explore their creative interests in fashion, photography, 
+                journalism, layout design, beauty, social media, and more!     
+                </p>
+            </div>
+            <div id = 'st2'  class = 'row' style="width: 30vw;">
+                <p class = 'subTitle'>What We Do</p>
+            </div>
+            <div id = 'ct2'  class = 'row' style="width: 30vw;">
+                <p class = 'contents'>
+                    In addition to publishing a full-length magazine, IVY is active on SNS, posting on to our blog and Instagram account.  
+                </p>
+                <p class = 'contents'>   
+                    Since 2018, we have done various projects, including collaborating with well-known Korean fashion brands, writing Q&As with alumni in the industry, and producing special features on various topics. 
+                </p>
+                <p class = 'contents'>    
+                    All of IVY’s content is directed and produced entirely by students, under the guidance of our faculty advisors. 
+                </p>
+            </div>
+            <div class="row" style="position: relative; height: 53vh;width: 100%;margin-top:45vh;margin-right: 0;margin-left:0;">
+                <object type="text/html" width="100%" height="100%" data="//www.youtube.com/embed/XAW7MsAtjq8" id = 'video'>
+                </object>
+            </div>
+        </div>
+    </div>
+    <div class = 'col-5'>
+        <div class = "aboutPic">
+            <img src="../static/images/aboutPic.png" style="width:137%; height:137%;object-fit: contain;" alt=""> 
+        </div>
+        <div id = 'r1'>   
+            <div class="row" style="width: 30vw; left: 5vw;">
+                <p class = 'title'>Recruitment</p>
+            </div>
+            <p class = 'recrut-state' style="width:35vw">
+                Interested in joining us? Various positions are available to all students of Incheon Global Campus! 
+            </p> 
+
+            <div class='row' style="width: 30vw; margin-top: 13vh;">
+                <p class = 'subsubTitle'>Writing Team</p>
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'>
+                Journalists 
+                </p>
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'>
+                Interviewers   
+                </p>
+            </div>
+
+
+            <div class="row" style="width: 30vw;">
+                <p class = 'subsubTitle'>Styling Team</p>
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'>
+                Stylists
+                </p>
+            </div>
+            <div class='row' style="width: 30vw;"> 
+                <p class = 'recrut'> 
+                Designers
+                </p> 
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'>
+                Hair and Makeup Artists
+                </p>
+            </div>
+
+
+            <div class='row' style="width: 30vw;">
+                <p class = 'subsubTitle'>Layout Team</p>
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'> Graphic Designers</p>
+            </div>
+
+            <div class='row' style="width: 30vw;">
+                <p class = 'subsubTitle'>Photography Team</p>
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'>
+                Editorial Photographers
+                </p> 
+            </div>
+            <div class='row' style="width: 30vw;"> 
+                <p class = 'recrut'>
+                Portrait Photographers
+                </p> 
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'>
+                Article Photographers 
+                </p>
+            </div>
+
+            <div class='row' style="width: 30vw;">
+                <p class = 'subsubTitle'>Modeling Team</p>
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'> 
+                Editorial Models 
+                </p>
+            </div>
+            <div class='row' style="width: 30vw;">
+                <p class = 'recrut'> 
+                Influencer Models
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

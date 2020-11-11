@@ -1,0 +1,26 @@
+{% extends 'magazines/main.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/mainPage.css' %}">
+
+<div class="marginDiv"></div>
+<div class="grid-container">
+    <div class="textSec">
+        <div class="logoContainer"><img src="../static/images/ivyLargeLogo.jpg" class="logoImg"></div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p style="font-family: Raleway, serif;">IVY: I Visualize You. We are IVY Magazine Club at SUNY Korea, 
+            founded in 2018 with the desire to bring together devoted and passionate students to produce stunning photoshoots,
+             insightful interviews, and thoughtful articles for you, our readers.</p>
+    </div>
+    <div class="imgSec">
+        <img src="../static/images/mainPage1.jpg" class="mainImg1"/>
+        <img src="../static/images/mainPic2.jpg" class="mainImg2"/>
+        <img src="../static/images/mainPage3.jpg" class="mainImg3"/>
+        <img src="../static/images/mainPic4.jpg" class="mainImg4"/>
+    </div>
+</div>
+{% endblock %}

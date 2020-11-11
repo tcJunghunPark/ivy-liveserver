@@ -1,0 +1,146 @@
+{% extends "admin/change_list.html" %}
+{% load static %}
+<!-- Override extrahead to add Chart.js -->
+{% block extrahead %}
+{{ block.super }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const ctx = document.getElementById('myChart').getContext('2d');
+  
+  x_axis_value = [];
+  y_axis_value = [];
+
+  function myFunction(item, index) {
+      console.log(item)
+    x_axis_value.push(item.name);
+    y_axis_value.push(item.viewcount);
+  }
+
+  const chartData = {{ magazine_data | safe }};
+  chartData.forEach(myFunction);
+
+  // Render the chart
+  const chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: x_axis_value,
+      datasets: [
+        {
+          label: 'Number of viewers',
+          data: y_axis_value,
+          backgroundColor: 'rgba(54,162,235,0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      scales: {
+
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
+    },
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const ctx = document.getElementById('purchaseChart').getContext('2d');
+  
+  magazineGroup = {};
+
+  const userGroupsData = {{ user_groups_data | safe }}
+  magazineData = {{ magazine_data | safe }}
+  groupData = {{ groups_data | safe }}
+
+  function getMagazineId(item, index) {
+    var i
+    for (i = 0; i < groupData.length; i++){
+      if (groupData[i].name == item.magazineGroup){
+        magazineGroup[groupData[i].id] = item.magazineGroup;
+      }
+    }
+  }
+  // replace magazineName with magazine id
+  magazineData.forEach(getMagazineId);
+  console.log(magazineGroup);
+  
+  purchaseData = {}
+
+  function getMagazinePurchaseCount(item, index){
+ 
+    if (item[1]){
+      if (Object.keys(magazineGroup).includes(item[1].toString())){
+        if (purchaseData[magazineGroup[item[1].toString()]] == null){
+          purchaseData[magazineGroup[item[1].toString()]] = 1
+   
+        } else {
+          purchaseData[magazineGroup[item[1].toString()]] += 1
+        }
+        
+      }
+    }
+  }
+  userGroupsData.forEach(getMagazinePurchaseCount)
+  console.log(purchaseData)
+  console.log(userGroupsData)
+  console.log(magazineData)
+  console.log(groupData)
+    
+  x_axis_value = Object.keys(purchaseData);
+  y_axis_value = Object.values(purchaseData);
+
+  
+  // Render the chart
+  const chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: x_axis_value,
+      datasets: [
+        {
+          label: 'Number of purchases',
+          data: y_axis_value,
+          backgroundColor: 'rgba(54,162,235,0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      scales: {
+
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
+    },
+  });
+});
+</script>
+{% endblock %}
+
+{% block content %}
+<!-- Render our chart -->
+<div style="width: 80%;">
+  <canvas style="margin-bottom: 30px; width: 60%; height: 50%;" id="myChart"></canvas>
+</div>
+<div style="width: 80%;">
+  <canvas style="margin-bottom: 30px; width: 60%; height: 50%;" id="purchaseChart"></canvas>
+</div>
+<!-- Render the rest of the ChangeList view -->
+{{ block.super }}
+{% endblock %}

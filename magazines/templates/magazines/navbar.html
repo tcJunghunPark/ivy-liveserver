@@ -1,0 +1,49 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/navbar.css' %}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+<nav>
+    <div class = "grid-containerNav">
+      <img src = '../../static/images/ivyLogo.jpg' class="imgPic"/>
+      <a class="nav-link1" id="nav-txt" href="{% url 'home' %}">HOME</a>
+      <a class="nav-link2" id="nav-txt" href="{% url 'blog' %}">BLOG</a>
+      <a class="nav-link3" id="nav-txt" href="{% url 'portfolio' %}">PORTFOLIO</a>
+      <a class="nav-link4" id="nav-txt" href="{% url 'magazine' %}">MAGAZINE</a>
+      <a class="nav-link5" id="nav-txt" href="{% url 'aboutUs' %}">ABOUT US</a>
+      <a class="nav-link6" id="nav-txt" href="{% url 'contactUs' %}">CONTACT US</a>
+      {%if request.user.is_authenticated%}
+        <a class="nav-link8" id="nav-txt" href= "{% url 'logout' %}" style="text-decoration: none;">LOGOUT</a>
+        <a class="nav-link9" id="nav-txt" href = ""data-toggle="modal" data-target="#userInfoModal" style="text-decoration: none; pointer-events:all;">MYINFO</a>
+      {% else %}
+        <a  class="nav-link7" id="nav-txt" href="{% url 'login' %}" id="sign_in" >SIGN IN</a>
+      {% endif %}
+    </div>
+  
+</nav>
+
+<div class="modal fade" id="userInfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-left: 22vw;margin-top: 20vh;height: 70vh; width: 56vw;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style= "width:40vw">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">My INFO</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container" >
+          <h3 class = "infoData"style="text-align: left; font-size: 2vw;">User: {{request.user.username}}</h3>
+          <br>
+          <h3 class = "infoData" style="text-align: left; font-size: 2vw;">Email: {{request.user.email}}</h3>
+          
+          <!-- <h4>Viewcount:{{ post.update_viewcount }}</h4> -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+{% extends "admin/change_list.html" %}
+{% load static %}
+<!-- Override extrahead to add Chart.js -->
+{% block extrahead %}
+{{ block.super }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const ctx = document.getElementById('myChart').getContext('2d');
+  
+  x_axis_value = [];
+  y_axis_value = [];
+
+  function myFunction(item, index) {
+      console.log(item)
+    x_axis_value.push(item.title);
+    y_axis_value.push(item.viewcount);
+  }
+
+  const chartData = {{ chart_data | safe }};
+  chartData.forEach(myFunction);
+
+  // Render the chart
+  const chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: x_axis_value,
+      datasets: [
+        {
+          label: 'Number of viewers',
+          data: y_axis_value,
+          backgroundColor: 'rgba(54,162,235,0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      scales: {
+
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
+    },
+  });
+});
+</script>
+{% endblock %}
+
+{% block content %}
+<!-- Render our chart -->
+<div style="width: 80%;">
+  <canvas style="margin-bottom: 30px; width: 60%; height: 50%;" id="myChart"></canvas>
+</div>
+<!-- Render the rest of the ChangeList view -->
+{{ block.super }}
+{% endblock %}

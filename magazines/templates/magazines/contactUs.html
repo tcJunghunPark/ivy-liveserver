@@ -1,0 +1,112 @@
+{% extends 'magazines/main.html'%}
+
+{% load static %}
+
+{% block content%}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/contactUs.css' %}">
+    
+    <div class="grid-container">
+        <div class="contactForm">
+            <h2>Contact Us</h2>
+                <form method="post" class="formBox" action={% url 'contactUs'%} onsubmit="confirm('Request has been sent to the administrator');">
+                    {% csrf_token %}
+                    <div class="inputBox">
+                        <div class="formInfo">Your Name:</div><br>
+                        <input type="text" name="message-name" required value="{{ request.user.username }}">
+                        
+                    </div>
+                    <div class="inputBox">
+                        <div class="formInfo">Your Email:</div><br>
+                        <input type="text" name="message-email" required value="{{ request.user.email}}">
+                        
+                    </div>
+                    <div class="inputBox">
+                        <div class="formInfo">Subject:</div><br>
+                        <input type="text" name="message-subject" required>
+                        
+                    </div>
+                    <div class="inputBox">
+                        <div class="formInfo"> Message:</div><br>
+                        <textarea name="message-info" required></textarea>
+                        
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="message-submit" value="Send a message" />
+                    </div>
+                </form>
+        </div>
+        <div class="purchaseForm">
+            <h2>Purchase Magazine</h2>
+                <form method="post" class="formBox" action={% url 'contactUs'%} onsubmit="confirm('Purchase Request has been sent to the administrator');">
+                    {% csrf_token %}
+                    <div class="inputBox">
+                        <div class="formInfo">Your Name:</div>
+                        <input type="text" name="purchase-name" required value="{{ request.user.username }}">
+                     
+                    </div>
+                    <div class="inputBox">
+                        <div class="formInfo">Your Email:</div>
+                        <input type="text" name="purchase-email" required value="{{ request.user.email }}">
+                
+                    </div>
+                    <div class="inputBox w50">
+                        <div class="formInfo">Select Magazine:</div><br>
+                        <table class="checkTable">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="mName" style="font-family:Playfair Display, serif;">
+                                            <span class="mOption" >Spring 2019</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkboxControler">
+                                            <input type="checkbox" value="spring2019" name="magazine-list"><br>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="mName">
+                                            <span class="mOption" >Fall 2019</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkboxControler">
+                                            <input type="checkbox" value="fall2019" name="magazine-list"><br>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="mName">
+                                            <span class="mOption">Spring 2020</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkboxControler">
+                                            <input type="checkbox" value="spring2020" name="magazine-list"><br>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="mName">
+                                            <span class="mOption">Fall 2020</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkboxControler">
+                                            <input type="checkbox" value="fall2020" name="magazine-list">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="inputBox w100">
+                            <input type="submit" name="purchase-submit" value="Request subscription">
+                        </div>
+                    </form>
+        </div>
+    </div>
+    {% endblock %}

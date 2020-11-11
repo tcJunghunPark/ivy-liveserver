@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+	<title>Magazine Access Denied</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+
+	<style>
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background: #FFFCBB !important;
+		}
+
+		.emailField{
+			margin-left: 9vw;
+			margin-bottom: 5vh;
+		}
+
+		.user_card {
+			position: relative;
+			left: 35vw;
+			top: 20vh;
+			width: 450px;
+			height: fit-content;
+			margin-top: auto;
+			margin-bottom: auto;
+			background: #FFD94E;
+			display: grid;
+			justify-content: center;
+			/* display: flex;
+			justify-content: center;
+			flex-direction: column; */
+			padding: 40px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+		}
+
+		h3{
+			margin-bottom: 10vh;
+			grid-row: 1;
+			justify-self: center;
+		}
+
+		p{
+			width: 25vw;
+			text-align: center;
+			justify-self: center;
+			padding: 10px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		.buttonsRow{
+			display: grid;
+			grid-row: 4;
+			grid-template-rows:1;
+			justify-self: center;
+			padding: 20px;
+		}
+
+		#purchaseButton{
+			grid-column-start: 1;
+			grid-column-end: 1;
+			background: #33ccff !important;
+			color: white !important;
+			border: none !important;
+			width: fit-content !important;
+			height: 40px !important;
+			border-radius: 12px !important;
+			box-shadow: none  !important;
+			outline: 0px  !important;
+		}
+
+
+		#returnButton{
+			grid-column-start: 2;
+			grid-column-end: 2;
+			margin-left: 2vw;
+			background: #33ccff !important;
+			color: white !important;
+			border: none !important;
+			width: fit-content !important;
+			height: 40px !important;
+			border-radius: 12px !important;
+			box-shadow: none  !important;
+			outline: 0px  !important;
+		}
+
+
+	</style>
+
+</head>
+<body>
+	<div class="user_card">
+		<h3>Access Denied</h3>
+
+		<p >You have not purchased this magazine yet.</p>
+		<p >Please make the purchase if you wish to view the magazine.</p>
+		<div class="buttonsRow">
+			<a class="btn btn-primary" id="purchaseButton" href="{%url 'contactUs' %}" >Purchase Magazine</a>
+			<a class="btn btn-primary" id="returnButton" href="{%url 'magazine' %}">Return</a>
+		</div>
+	</div>
+</body>
+
+</html>
