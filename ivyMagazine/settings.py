@@ -35,7 +35,7 @@ EMAIL_HOST_PASSWORD = 'ivyfall2018!'# from email password
 
  
 
-ALLOWED_HOSTS = ['https://ivymagazineclone.herokuapp.com/', '127.0.0.1']  ###############################Change made from blank [] to [*]
+ALLOWED_HOSTS = ['ivymagazineclone.herokuapp.com/', '127.0.0.1']  ###############################Change made from blank [] to [*]
 
 
 # Application definition
